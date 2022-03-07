@@ -1,0 +1,74 @@
+/* Basic Styles */
+* {
+	box-sizing: border-box;  /* element 的 width= border + padding + content */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #edeff0;
+    font-family: 'Roboto', sans-serif;   /* 从 Google-Fonts 复制过来的 */
+    font-size: 16px;
+    color: #797e83;  /* The color CSS property sets the color of an element's text  */
+    line-height: 1.5;
+    min-width: min-content;
+}
+
+h1, h2, h3, h4, a {
+    color: #3a3a3a;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;  /* 取消 link 的下划线*/
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 90%;
+    height: auto;
+} 
+
+header {
+    margin: 0 auto;
+}
+
+header,
+#portfolio,
+#contact,
+.main-footer {
+    width: 90%;
+    max-width: 1080px;
+}
+
+.main-header,
+#portfolio,
+#contact,
+.btn {
+    text-align: center;
+}
+
+.card img {
+    width: 30%;
+}
+
+.title-2 {
+    padding: 1.675em 0;
+}
+
+.btn{
+    color: #fff;
+    background-color: lightgray;
+	border-radius: .35em;
+    padding: .625em 1.25em;
+    margin: 1em auto;
+}
+
+

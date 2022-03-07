@@ -1,0 +1,176 @@
+/* Navigation */
+.main-header,
+.nav,
+.main-footer,
+.main-footer ul  {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    padding: 1.25em;  /* 20px */;
+}
+
+.name {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    margin-top: 1em;
+}
+
+.nav li,
+.profile,
+#portfolio {
+    background-color: #fff;
+}
+
+.nav li { 
+    display: block;   /* 非 Flex-container，by default, display:content, 即根据内容分配大小 */
+    padding: 10px 15px;
+    margin: .5em;
+} 
+
+.nav a:hover {
+    color: steelblue;
+}
+
+
+/* Profile */
+.profile,
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.profile {
+    justify-items: center;
+    padding: 1.25em 2em;
+}
+
+.image {
+    max-width: 320px;
+}
+
+.bio {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+
+/* Portfolio */
+#portfolio {
+    padding: 0.25em 0 2.5em 0;
+    margin: 1.5em auto;
+}
+
+.card {
+    padding: 1.5em 1em 0 1em;
+}
+
+.card h2 {
+    margin: 0.35em 0 0;
+    line-height: 1.25;
+}
+
+#contact {
+    margin: 1em auto;
+    border-bottom: 1px solid #3a3a3a;
+    padding-bottom: 2em;
+}
+
+
+.main-footer {
+    margin: 1em auto;
+    padding-bottom: 1em;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 400px) {
+    .main-footer ul {
+        flex-direction: row;
+    }
+    .main-footer ul li {
+        padding: 0 .6em;
+    }
+    .btn {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Navigation */
+    .main-header {
+        height: 170px;
+        justify-content: flex-end;
+    }
+    .name {
+        margin-top:0;
+    }
+    .nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+    .nav li {
+        background-color: transparent;
+    }
+    .nav a:hover {
+        border-bottom: 1px solid lightsteelblue;
+    }
+
+    /* Profile */
+    .profile {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+    .image {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: center;
+    }
+    .bio {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-self: start;
+    }    
+
+    .main-content {
+        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    }
+
+    .main-footer .nav{
+        margin-top: 0;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    /* Navigation */
+    .main-header {
+        height: 120px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .name,
+    .nav {
+        align-self: center;
+    }
+    .nav {
+        margin-top: 0;
+    }
+    .nav li:nth-last-child(1) {
+        padding-right: 0;
+    }
+
+}
